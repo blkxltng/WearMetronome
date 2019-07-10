@@ -3,6 +3,7 @@
     package="com.blkxltng.wearmetronome">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <uses-feature android:name="android.hardware.type.watch" />
 
@@ -25,13 +26,23 @@
             android:value="true" />
 
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:name=".SetupActivity"
+            android:label="@string/title_activity_setup">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".SetupActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
     </application>
 
